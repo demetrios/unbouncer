@@ -34,7 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'simple_form'
 gem 'slim'
-gem 'unicorn'
+gem 'puma'
 
 group :development do
   gem 'better_errors'
