@@ -1,0 +1,10 @@
+= simple_form_for(@widget) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :color
+    = f.input :campaign_id, as: :hidden if @widget.campaign_id
+
+  .form-actions
+    = f.button :submit
