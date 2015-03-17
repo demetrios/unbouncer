@@ -14,7 +14,7 @@ class WidgetsController < ApplicationController
 
   # GET /widgets/new
   def new
-    @widget = Widget.new(color: params[:color], campaign_id: params[:pagename])
+    @widget = Widget.new(color: params[:color], landing_pagename: params[:pagename])
   end
 
   # GET /widgets/1/edit

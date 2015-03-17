@@ -4,7 +4,7 @@
   .form-inputs
     = f.input :name
     = f.input :color
-    = f.input :campaign_id, as: :hidden if @widget.campaign_id
+    = f.input :landing_pagename, as: :hidden if @widget.landing_pagename
 
   .form-actions
     = f.button :submit
