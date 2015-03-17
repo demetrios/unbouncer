@@ -14,7 +14,7 @@ class WidgetsController < ApplicationController
 
   # GET /widgets/new
   def new
-    @widget = Widget.new(color: params[:color], campaign_id: params[:campaign_id])
+    @widget = Widget.new(color: params[:color], campaign_id: params[:pagename])
   end
 
   # GET /widgets/1/edit
@@ -69,17 +69,17 @@ class WidgetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def widget_params
-      params.require(:widget).permit(:name, :color, :campaign_id)
+      params.require(:widget).permit(:name, :color, :pagename)
     end
     
-    def widget_from_params
-      name = widget_params.delete(:name)
-      color = widget_params.delete(:color)
-      
-      Widget.new(widget_params).tap do |widget|
-        widget.name = name
-        widget.color = color
-      end
-    end
+    # def widget_from_params
+    #   name = widget_params.delete(:name)
+    #   color = widget_params.delete(:color)
+    #
+    #   Widget.new(widget_params).tap do |widget|
+    #     widget.name = name
+    #     widget.color = color
+    #   end
+    # end
     
 end
