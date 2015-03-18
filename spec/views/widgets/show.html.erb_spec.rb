@@ -5,7 +5,7 @@ RSpec.describe "widgets/show", type: :view do
     @widget = assign(:widget, Widget.create!(
       :name => "Name",
       :color => "Color",
-      :landing_pagename => "Landing"
+      :landpage => "Landpage"
     ))
   end
 
@@ -13,6 +13,6 @@ RSpec.describe "widgets/show", type: :view do
     render
     expect(rendered).to match(/Name/)
     expect(rendered).to match(/Color/)
-    expect(rendered).to match(/Landing/)
+    expect(rendered).to match(/Landpage/)
   end
 end

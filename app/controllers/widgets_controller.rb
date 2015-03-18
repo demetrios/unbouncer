@@ -14,7 +14,7 @@ class WidgetsController < ApplicationController
 
   # GET /widgets/new
   def new
-    @widget = Widget.new(color: params[:color], landing_pagename: params[:pagename])
+    @widget = Widget.new(color: params[:color], landpage: params[:landpage])
   end
 
   # GET /widgets/1/edit
@@ -69,7 +69,7 @@ class WidgetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def widget_params
-      params.require(:widget).permit(:name, :color, :pagename)
+      params.require(:widget).permit(:name, :color, :landpage)
     end
     
     # def widget_from_params

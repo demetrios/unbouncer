@@ -6,12 +6,12 @@ RSpec.describe "widgets/index", type: :view do
       Widget.create!(
         :name => "Name",
         :color => "Color",
-        :landing_pagename => "Landing"
+        :landpage => "Landpage"
       ),
       Widget.create!(
         :name => "Name",
         :color => "Color",
-        :landing_pagename => "Landing"
+        :landpage => "Landpage"
       )
     ])
   end
@@ -20,6 +20,6 @@ RSpec.describe "widgets/index", type: :view do
     render
     assert_select "tr>td", :text => "Name".to_s, :count => 2
     assert_select "tr>td", :text => "Color".to_s, :count => 2
-    assert_select "tr>td", :text => "Landing".to_s, :count => 2
+    assert_select "tr>td", :text => "Landpage".to_s, :count => 2
   end
 end

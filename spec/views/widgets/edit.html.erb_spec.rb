@@ -5,7 +5,7 @@ RSpec.describe "widgets/edit", type: :view do
     @widget = assign(:widget, Widget.create!(
       :name => "MyString",
       :color => "MyString",
-      :landing_pagename => "MyString"
+      :landpage => "MyString"
     ))
   end
 
@@ -18,7 +18,7 @@ RSpec.describe "widgets/edit", type: :view do
 
       assert_select "input#widget_color[name=?]", "widget[color]"
 
-      assert_select "input#widget_landing_pagename[name=?]", "widget[landing_pagename]"
+      assert_select "input#widget_landpage[name=?]", "widget[landpage]"
     end
   end
 end
